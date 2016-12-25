@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
-  <repositories>
+  <!-- <repositories>
   <repository>
       <id>aws-release</id>
       <name>AWS S3 Release Repository</name>
@@ -20,11 +20,11 @@
       </snapshots>
   </repository>
 </repositories>
+   -->
   
   
   
-  
-  <distributionManagement>
+  <!-- <distributionManagement>
   <repository>
       <id>aws-release</id>
       <name>AWS S3 Release Repository</name>
@@ -36,7 +36,7 @@
       <url>s3://wbinglee-so-s3/snapshot</url>
   </snapshotRepository>
 </distributionManagement>
-
+ -->
 <build>
   <!--  <extensions>
     <extension>
@@ -79,7 +79,7 @@
     
     <extensions>
     
-    <extension>
+    <!-- <extension>
       <groupId>org.springframework.build</groupId>
       <artifactId>aws-maven</artifactId>
       <version>5.0.0.RELEASE</version>
@@ -89,12 +89,48 @@
         <groupId>org.apache.maven.wagon</groupId>
          <artifactId>wagon-file</artifactId>
          <version>1.0-beta-3</version>
-      </extension>
-    </extensions>
+      </extension>-->
+    </extensions> 
   </build>
     
   
   <dependencies>
+  
+  <dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>2.45.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-junit47</artifactId>
+			<version>2.12</version>
+		</dependency>
+
+  
   
   <dependency>
         <groupId>javax.servlet</groupId>
